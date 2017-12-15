@@ -1,0 +1,48 @@
+doctype html
+head
+    title Quiz
+    link(rel = "stylesheet", href = "/components/bootstrap/dist/css/bootstrap.css")
+    link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open Sans')
+    link(rel = "stylesheet", href = "/css/style.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="/components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
+    script(src="/socket.io/socket.io.js")
+body
+    nav.navbar.navbar-inverse
+        .container
+            .navbar-header
+            a.navbar-brand(href="/") Quiz
+    .container
+        .row
+            .col-md-8
+                #error
+                #userDetails
+                #userFormWrap
+                    h1 Create UserName
+                    form#userForm
+                        input#username.form-control(type="text", placeholder= "Enter Username ....")
+                        br
+                        button.btn.btn-default(type="submit") Submit
+                #questionWrap
+                    #quiz
+                    br
+                    #next.btn.btn-default
+                        a(href="#") Next
+                    #start.btn.btn-default
+                        a(href='#') Next Exercise
+                #mainWrap
+                    h2 Chat
+                    form#chatForm
+                        .form-group
+                            textarea#chatInput.form-control(name= "body", placeholder="Say something...")
+                            br
+                            button.btn.btn-default(type="submit") Send Text
+                            br
+                            br
+                        #chatWindow.well
+            .col-md-4
+                #leaderboard
+                    h3 Leaderboard
+                    #users
+
